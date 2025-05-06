@@ -8,108 +8,190 @@ namespace Soenneker.Stripe.Enums.ErrorCodes;
 [Intellenum<string>]
 public partial class StripeErrorCode
 {
-    /// <summary>Generic error code returned when no other error code applies</summary>
-    public static readonly StripeErrorCode InvalidRequestError = new("invalid_request_error");
-
-    /// <summary>The card has been declined for an unknown reason</summary>
-    public static readonly StripeErrorCode CardDeclined = new("card_declined");
-
-    /// <summary>The card has insufficient funds to complete the purchase</summary>
-    public static readonly StripeErrorCode InsufficientFunds = new("insufficient_funds");
-
-    /// <summary>The card is expired</summary>
-    public static readonly StripeErrorCode ExpiredCard = new("expired_card");
-
-    /// <summary>The CVC number is incorrect</summary>
-    public static readonly StripeErrorCode IncorrectCvc = new("incorrect_cvc");
-
-    /// <summary>The card number is incorrect</summary>
-    public static readonly StripeErrorCode IncorrectNumber = new("incorrect_number");
-
-    /// <summary>The card’s expiration month is incorrect</summary>
-    public static readonly StripeErrorCode IncorrectExpMonth = new("incorrect_exp_month");
-
-    /// <summary>The card’s expiration year is incorrect</summary>
-    public static readonly StripeErrorCode IncorrectExpYear = new("incorrect_exp_year");
-
-    /// <summary>The card was declined for suspected fraud</summary>
-    public static readonly StripeErrorCode Fraudulent = new("fraudulent");
-
-    /// <summary>The customer has exceeded the balance or credit limit</summary>
-    public static readonly StripeErrorCode AmountTooLarge = new("amount_too_large");
-
-    /// <summary>The provided bank account has been declined</summary>
-    public static readonly StripeErrorCode BankAccountDeclined = new("bank_account_declined");
-
-    /// <summary>The charge has already been captured</summary>
-    public static readonly StripeErrorCode ChargeAlreadyCaptured = new("charge_already_captured");
-
-    /// <summary>The charge has already been refunded</summary>
-    public static readonly StripeErrorCode ChargeAlreadyRefunded = new("charge_already_refunded");
-
-    /// <summary>The charge has been disputed by the cardholder</summary>
-    public static readonly StripeErrorCode DisputedCharge = new("disputed_charge");
-
-    /// <summary>The payment method is not supported</summary>
-    public static readonly StripeErrorCode PaymentMethodUnsupported = new("payment_method_unsupported");
-
-    /// <summary>The card was declined by the issuing bank</summary>
-    public static readonly StripeErrorCode ProcessingError = new("processing_error");
-
-    /// <summary>The authentication attempt failed</summary>
-    public static readonly StripeErrorCode AuthenticationError = new("authentication_error");
-
-    /// <summary>The charge was declined due to a generic error</summary>
-    public static readonly StripeErrorCode GenericDecline = new("generic_decline");
-
-    /// <summary>The issuer declined the request to create a token</summary>
-    public static readonly StripeErrorCode TokenAlreadyUsed = new("token_already_used");
-
-    /// <summary>The request requires an idempotency key</summary>
-    public static readonly StripeErrorCode IdempotencyKeyInUse = new("idempotency_key_in_use");
-
-    /// <summary>The request was rate-limited</summary>
-    public static readonly StripeErrorCode RateLimit = new("rate_limit");
-
-    /// <summary>The setup attempt failed for an unknown reason</summary>
-    public static readonly StripeErrorCode SetupAttemptFailed = new("setup_attempt_failed");
-
-    /// <summary>Customer has no attached payment method</summary>
-    public static readonly StripeErrorCode NoPaymentMethod = new("no_payment_method");
-
-    /// <summary>The request used an incorrect API key</summary>
-    public static readonly StripeErrorCode InvalidApiKey = new("invalid_api_key");
-
-    /// <summary>The client secret was incorrect or expired</summary>
-    public static readonly StripeErrorCode InvalidClientSecret = new("invalid_client_secret");
-
-    /// <summary>The payment intent status does not allow this operation</summary>
-    public static readonly StripeErrorCode InvalidPaymentIntentStatus = new("invalid_payment_intent_status");
-
-    /// <summary>The mandate is invalid or not usable</summary>
-    public static readonly StripeErrorCode InvalidMandate = new("invalid_mandate");
-
-    /// <summary>The customer’s account was closed</summary>
     public static readonly StripeErrorCode AccountClosed = new("account_closed");
+    public static readonly StripeErrorCode AccountCountryInvalidAddress = new("account_country_invalid_address");
+    public static readonly StripeErrorCode AccountErrorCountryChangeRequiresAdditionalSteps = new("account_error_country_change_requires_additional_steps");
+    public static readonly StripeErrorCode AccountInformationMismatch = new("account_information_mismatch");
+    public static readonly StripeErrorCode AccountInvalid = new("account_invalid");
+    public static readonly StripeErrorCode AccountNumberInvalid = new("account_number_invalid");
+    public static readonly StripeErrorCode AcssDebitSessionIncomplete = new("acss_debit_session_incomplete");
+    public static readonly StripeErrorCode AlipayUpgradeRequired = new("alipay_upgrade_required");
+    public static readonly StripeErrorCode AmountTooLarge = new("amount_too_large");
+    public static readonly StripeErrorCode AmountTooSmall = new("amount_too_small");
+    public static readonly StripeErrorCode ApiKeyExpired = new("api_key_expired");
+    public static readonly StripeErrorCode ApplicationFeesNotAllowed = new("application_fees_not_allowed");
+    public static readonly StripeErrorCode AuthenticationRequired = new("authentication_required");
+    public static readonly StripeErrorCode BalanceInsufficient = new("balance_insufficient");
+    public static readonly StripeErrorCode BalanceInvalidParameter = new("balance_invalid_parameter");
+    public static readonly StripeErrorCode BankAccountBadRoutingNumbers = new("bank_account_bad_routing_numbers");
+    public static readonly StripeErrorCode BankAccountDeclined = new("bank_account_declined");
+    public static readonly StripeErrorCode BankAccountExists = new("bank_account_exists");
+    public static readonly StripeErrorCode BankAccountRestricted = new("bank_account_restricted");
+    public static readonly StripeErrorCode BankAccountUnusable = new("bank_account_unusable");
+    public static readonly StripeErrorCode BankAccountUnverified = new("bank_account_unverified");
+    public static readonly StripeErrorCode BankAccountVerificationFailed = new("bank_account_verification_failed");
+    public static readonly StripeErrorCode BillingInvalidMandate = new("billing_invalid_mandate");
+    public static readonly StripeErrorCode BitcoinUpgradeRequired = new("bitcoin_upgrade_required");
+    public static readonly StripeErrorCode CaptureChargeAuthorizationExpired = new("capture_charge_authorization_expired");
+    public static readonly StripeErrorCode CaptureUnauthorizedPayment = new("capture_unauthorized_payment");
+    public static readonly StripeErrorCode CardDeclineRateLimitExceeded = new("card_decline_rate_limit_exceeded");
+    public static readonly StripeErrorCode CardDeclined = new("card_declined");
+    public static readonly StripeErrorCode CardholderPhoneNumberRequired = new("cardholder_phone_number_required");
+    public static readonly StripeErrorCode ChargeAlreadyCaptured = new("charge_already_captured");
+    public static readonly StripeErrorCode ChargeAlreadyRefunded = new("charge_already_refunded");
+    public static readonly StripeErrorCode ChargeDisputed = new("charge_disputed");
+    public static readonly StripeErrorCode ChargeExceedsSourceLimit = new("charge_exceeds_source_limit");
+    public static readonly StripeErrorCode ChargeExceedsTransactionLimit = new("charge_exceeds_transaction_limit");
+    public static readonly StripeErrorCode ChargeExpiredForCapture = new("charge_expired_for_capture");
+    public static readonly StripeErrorCode ChargeInvalidParameter = new("charge_invalid_parameter");
+    public static readonly StripeErrorCode ChargeNotRefundable = new("charge_not_refundable");
+    public static readonly StripeErrorCode ClearingCodeUnsupported = new("clearing_code_unsupported");
+    public static readonly StripeErrorCode CountryCodeInvalid = new("country_code_invalid");
+    public static readonly StripeErrorCode CountryUnsupported = new("country_unsupported");
+    public static readonly StripeErrorCode CouponExpired = new("coupon_expired");
+    public static readonly StripeErrorCode CustomerMaxPaymentMethods = new("customer_max_payment_methods");
+    public static readonly StripeErrorCode CustomerMaxSubscriptions = new("customer_max_subscriptions");
+    public static readonly StripeErrorCode CustomerTaxLocationInvalid = new("customer_tax_location_invalid");
+    public static readonly StripeErrorCode DebitNotAuthorized = new("debit_not_authorized");
+    public static readonly StripeErrorCode EmailInvalid = new("email_invalid");
+    public static readonly StripeErrorCode ExpiredCard = new("expired_card");
+    public static readonly StripeErrorCode FinancialConnectionsAccountInactive = new("financial_connections_account_inactive");
+    public static readonly StripeErrorCode FinancialConnectionsNoSuccessfulTransactionRefresh = new("financial_connections_no_successful_transaction_refresh");
+    public static readonly StripeErrorCode ForwardingApiInactive = new("forwarding_api_inactive");
+    public static readonly StripeErrorCode ForwardingApiInvalidParameter = new("forwarding_api_invalid_parameter");
+    public static readonly StripeErrorCode ForwardingApiRetryableUpstreamError = new("forwarding_api_retryable_upstream_error");
+    public static readonly StripeErrorCode ForwardingApiUpstreamConnectionError = new("forwarding_api_upstream_connection_error");
+    public static readonly StripeErrorCode ForwardingApiUpstreamConnectionTimeout = new("forwarding_api_upstream_connection_timeout");
+    public static readonly StripeErrorCode IdempotencyKeyInUse = new("idempotency_key_in_use");
+    public static readonly StripeErrorCode IncorrectAddress = new("incorrect_address");
+    public static readonly StripeErrorCode IncorrectCvc = new("incorrect_cvc");
+    public static readonly StripeErrorCode IncorrectNumber = new("incorrect_number");
+    public static readonly StripeErrorCode IncorrectZip = new("incorrect_zip");
+    public static readonly StripeErrorCode InstantPayoutsConfigDisabled = new("instant_payouts_config_disabled");
+    public static readonly StripeErrorCode InstantPayoutsCurrencyDisabled = new("instant_payouts_currency_disabled");
+    public static readonly StripeErrorCode InstantPayoutsLimitExceeded = new("instant_payouts_limit_exceeded");
+    public static readonly StripeErrorCode InstantPayoutsUnsupported = new("instant_payouts_unsupported");
+    public static readonly StripeErrorCode InsufficientFunds = new("insufficient_funds");
+    public static readonly StripeErrorCode IntentInvalidState = new("intent_invalid_state");
+    public static readonly StripeErrorCode IntentVerificationMethodMissing = new("intent_verification_method_missing");
+    public static readonly StripeErrorCode InvalidCardType = new("invalid_card_type");
+    public static readonly StripeErrorCode InvalidCharacters = new("invalid_characters");
+    public static readonly StripeErrorCode InvalidChargeAmount = new("invalid_charge_amount");
+    public static readonly StripeErrorCode InvalidCvc = new("invalid_cvc");
+    public static readonly StripeErrorCode InvalidExpiryMonth = new("invalid_expiry_month");
+    public static readonly StripeErrorCode InvalidExpiryYear = new("invalid_expiry_year");
+    public static readonly StripeErrorCode InvalidMandateReferencePrefixFormat = new("invalid_mandate_reference_prefix_format");
+    public static readonly StripeErrorCode InvalidNumber = new("invalid_number");
+    public static readonly StripeErrorCode InvalidSourceUsage = new("invalid_source_usage");
+    public static readonly StripeErrorCode InvalidTaxLocation = new("invalid_tax_location");
+    public static readonly StripeErrorCode InvoiceNoCustomerLineItems = new("invoice_no_customer_line_items");
+    public static readonly StripeErrorCode InvoiceNoPaymentMethodTypes = new("invoice_no_payment_method_types");
+    public static readonly StripeErrorCode InvoiceNoSubscriptionLineItems = new("invoice_no_subscription_line_items");
+    public static readonly StripeErrorCode InvoiceNotEditable = new("invoice_not_editable");
+    public static readonly StripeErrorCode InvoiceOnBehalfOfNotEditable = new("invoice_on_behalf_of_not_editable");
+    public static readonly StripeErrorCode InvoicePaymentIntentRequiresAction = new("invoice_payment_intent_requires_action");
+    public static readonly StripeErrorCode InvoiceUpcomingNone = new("invoice_upcoming_none");
+    public static readonly StripeErrorCode LivemodeMismatch = new("livemode_mismatch");
+    public static readonly StripeErrorCode LockTimeout = new("lock_timeout");
+    public static readonly StripeErrorCode Missing = new("missing");
+    public static readonly StripeErrorCode NoAccount = new("no_account");
+    public static readonly StripeErrorCode NotAllowedOnStandardAccount = new("not_allowed_on_standard_account");
+    public static readonly StripeErrorCode OutOfInventory = new("out_of_inventory");
+    public static readonly StripeErrorCode OwnershipDeclarationNotAllowed = new("ownership_declaration_not_allowed");
+    public static readonly StripeErrorCode ParameterInvalidEmpty = new("parameter_invalid_empty");
+    public static readonly StripeErrorCode ParameterInvalidInteger = new("parameter_invalid_integer");
+    public static readonly StripeErrorCode ParameterInvalidStringBlank = new("parameter_invalid_string_blank");
+    public static readonly StripeErrorCode ParameterInvalidStringEmpty = new("parameter_invalid_string_empty");
+    public static readonly StripeErrorCode ParameterMissing = new("parameter_missing");
+    public static readonly StripeErrorCode ParameterUnknown = new("parameter_unknown");
+    public static readonly StripeErrorCode ParametersExclusive = new("parameters_exclusive");
+    public static readonly StripeErrorCode PaymentIntentActionRequired = new("payment_intent_action_required");
+    public static readonly StripeErrorCode PaymentIntentAmountReconfirmationRequired = new("payment_intent_amount_reconfirmation_required");
+    public static readonly StripeErrorCode PaymentIntentAuthenticationFailure = new("payment_intent_authentication_failure");
+    public static readonly StripeErrorCode PaymentIntentAutomaticTaxIncomplete = new("payment_intent_automatic_tax_incomplete");
+    public static readonly StripeErrorCode PaymentIntentIncompatiblePaymentMethod = new("payment_intent_incompatible_payment_method");
+    public static readonly StripeErrorCode PaymentIntentInvalidParameter = new("payment_intent_invalid_parameter");
+    public static readonly StripeErrorCode PaymentIntentKonbiniRejectedConfirmationNumber = new("payment_intent_konbini_rejected_confirmation_number");
+    public static readonly StripeErrorCode PaymentIntentMandateInvalid = new("payment_intent_mandate_invalid");
+    public static readonly StripeErrorCode PaymentIntentPaymentAttemptExpired = new("payment_intent_payment_attempt_expired");
+    public static readonly StripeErrorCode PaymentIntentPaymentAttemptFailed = new("payment_intent_payment_attempt_failed");
+    public static readonly StripeErrorCode PaymentIntentUnexpectedState = new("payment_intent_unexpected_state");
+    public static readonly StripeErrorCode PaymentMethodBankAccountAlreadyVerified = new("payment_method_bank_account_already_verified");
+    public static readonly StripeErrorCode PaymentMethodBankAccountBlocked = new("payment_method_bank_account_blocked");
+    public static readonly StripeErrorCode PaymentMethodBillingDetailsAddressMissing = new("payment_method_billing_details_address_missing");
+    public static readonly StripeErrorCode PaymentMethodConfigurationFailures = new("payment_method_configuration_failures");
+    public static readonly StripeErrorCode PaymentMethodCurrencyMismatch = new("payment_method_currency_mismatch");
+    public static readonly StripeErrorCode PaymentMethodCustomerDecline = new("payment_method_customer_decline");
+    public static readonly StripeErrorCode PaymentMethodInvalidParameter = new("payment_method_invalid_parameter");
+    public static readonly StripeErrorCode PaymentMethodInvalidParameterTestmode = new("payment_method_invalid_parameter_testmode");
+    public static readonly StripeErrorCode PaymentMethodMicrodepositFailed = new("payment_method_microdeposit_failed");
 
-    /// <summary>The customer's account was disabled or rejected</summary>
-    public static readonly StripeErrorCode AccountDisabled = new("account_disabled");
+    public static readonly StripeErrorCode PaymentMethodMicrodepositVerificationAmountsInvalid =
+        new("payment_method_microdeposit_verification_amounts_invalid");
 
-    /// <summary>The source is already used or attached</summary>
-    public static readonly StripeErrorCode SourceUsed = new("source_used");
+    public static readonly StripeErrorCode PaymentMethodMicrodepositVerificationAmountsMismatch =
+        new("payment_method_microdeposit_verification_amounts_mismatch");
 
-    /// <summary>The provided source has been lost or revoked</summary>
-    public static readonly StripeErrorCode SourceRevoked = new("source_revoked");
+    public static readonly StripeErrorCode PaymentMethodMicrodepositVerificationAttemptsExceeded =
+        new("payment_method_microdeposit_verification_attempts_exceeded");
 
-    /// <summary>The bank account has failed verification</summary>
-    public static readonly StripeErrorCode VerificationFailed = new("verification_failed");
+    public static readonly StripeErrorCode PaymentMethodMicrodepositVerificationDescriptorCodeMismatch =
+        new("payment_method_microdeposit_verification_descriptor_code_mismatch");
 
-    /// <summary>The account cannot currently accept charges</summary>
-    public static readonly StripeErrorCode AccountNotEnabled = new("account_not_enabled");
-
-    /// <summary>The provided coupon code is invalid or expired</summary>
-    public static readonly StripeErrorCode InvalidCoupon = new("invalid_coupon");
-
-    /// <summary>The subscription cannot be updated or canceled</summary>
-    public static readonly StripeErrorCode SubscriptionNotUpdatable = new("subscription_not_updatable");
+    public static readonly StripeErrorCode PaymentMethodMicrodepositVerificationTimeout = new("payment_method_microdeposit_verification_timeout");
+    public static readonly StripeErrorCode PaymentMethodNotAvailable = new("payment_method_not_available");
+    public static readonly StripeErrorCode PaymentMethodProviderDecline = new("payment_method_provider_decline");
+    public static readonly StripeErrorCode PaymentMethodProviderTimeout = new("payment_method_provider_timeout");
+    public static readonly StripeErrorCode PaymentMethodUnactivated = new("payment_method_unactivated");
+    public static readonly StripeErrorCode PaymentMethodUnexpectedState = new("payment_method_unexpected_state");
+    public static readonly StripeErrorCode PaymentMethodUnsupportedType = new("payment_method_unsupported_type");
+    public static readonly StripeErrorCode PayoutReconciliationNotReady = new("payout_reconciliation_not_ready");
+    public static readonly StripeErrorCode PayoutsLimitExceeded = new("payouts_limit_exceeded");
+    public static readonly StripeErrorCode PayoutsNotAllowed = new("payouts_not_allowed");
+    public static readonly StripeErrorCode PlatformAccountRequired = new("platform_account_required");
+    public static readonly StripeErrorCode PlatformApiKeyExpired = new("platform_api_key_expired");
+    public static readonly StripeErrorCode PostalCodeInvalid = new("postal_code_invalid");
+    public static readonly StripeErrorCode ProcessingError = new("processing_error");
+    public static readonly StripeErrorCode ProductInactive = new("product_inactive");
+    public static readonly StripeErrorCode ProgressiveOnboardingLimitExceeded = new("progressive_onboarding_limit_exceeded");
+    public static readonly StripeErrorCode RateLimit = new("rate_limit");
+    public static readonly StripeErrorCode ReferToCustomer = new("refer_to_customer");
+    public static readonly StripeErrorCode RefundDisputedPayment = new("refund_disputed_payment");
+    public static readonly StripeErrorCode ResourceAlreadyExists = new("resource_already_exists");
+    public static readonly StripeErrorCode ResourceMissing = new("resource_missing");
+    public static readonly StripeErrorCode ReturnIntentAlreadyProcessed = new("return_intent_already_processed");
+    public static readonly StripeErrorCode RoutingNumberInvalid = new("routing_number_invalid");
+    public static readonly StripeErrorCode SecretKeyRequired = new("secret_key_required");
+    public static readonly StripeErrorCode SepaUnsupportedAccount = new("sepa_unsupported_account");
+    public static readonly StripeErrorCode SetupAttemptFailed = new("setup_attempt_failed");
+    public static readonly StripeErrorCode SetupIntentAuthenticationFailure = new("setup_intent_authentication_failure");
+    public static readonly StripeErrorCode SetupIntentInvalidParameter = new("setup_intent_invalid_parameter");
+    public static readonly StripeErrorCode SetupIntentMandateInvalid = new("setup_intent_mandate_invalid");
+    public static readonly StripeErrorCode SetupIntentMobileWalletUnsupported = new("setup_intent_mobile_wallet_unsupported");
+    public static readonly StripeErrorCode SetupIntentSetupAttemptExpired = new("setup_intent_setup_attempt_expired");
+    public static readonly StripeErrorCode SetupIntentUnexpectedState = new("setup_intent_unexpected_state");
+    public static readonly StripeErrorCode ShippingAddressInvalid = new("shipping_address_invalid");
+    public static readonly StripeErrorCode ShippingCalculationFailed = new("shipping_calculation_failed");
+    public static readonly StripeErrorCode SkuInactive = new("sku_inactive");
+    public static readonly StripeErrorCode StateUnsupported = new("state_unsupported");
+    public static readonly StripeErrorCode StatusTransitionInvalid = new("status_transition_invalid");
+    public static readonly StripeErrorCode StripeTaxInactive = new("stripe_tax_inactive");
+    public static readonly StripeErrorCode TaxIdInvalid = new("tax_id_invalid");
+    public static readonly StripeErrorCode TaxIdProhibited = new("tax_id_prohibited");
+    public static readonly StripeErrorCode TaxesCalculationFailed = new("taxes_calculation_failed");
+    public static readonly StripeErrorCode TerminalLocationCountryUnsupported = new("terminal_location_country_unsupported");
+    public static readonly StripeErrorCode TerminalReaderBusy = new("terminal_reader_busy");
+    public static readonly StripeErrorCode TerminalReaderHardwareFault = new("terminal_reader_hardware_fault");
+    public static readonly StripeErrorCode TerminalReaderInvalidLocationForActivation = new("terminal_reader_invalid_location_for_activation");
+    public static readonly StripeErrorCode TerminalReaderInvalidLocationForPayment = new("terminal_reader_invalid_location_for_payment");
+    public static readonly StripeErrorCode TerminalReaderOffline = new("terminal_reader_offline");
+    public static readonly StripeErrorCode TerminalReaderTimeout = new("terminal_reader_timeout");
+    public static readonly StripeErrorCode TestmodeChargesOnly = new("testmode_charges_only");
+    public static readonly StripeErrorCode TlsVersionUnsupported = new("tls_version_unsupported");
+    public static readonly StripeErrorCode TokenAlreadyUsed = new("token_already_used");
+    public static readonly StripeErrorCode TokenCardNetworkInvalid = new("token_card_network_invalid");
+    public static readonly StripeErrorCode TokenInUse = new("token_in_use");
+    public static readonly StripeErrorCode TransferSourceBalanceParametersMismatch = new("transfer_source_balance_parameters_mismatch");
+    public static readonly StripeErrorCode TransfersNotAllowed = new("transfers_not_allowed");
+    public static readonly StripeErrorCode UrlInvalid = new("url_invalid");
 }
