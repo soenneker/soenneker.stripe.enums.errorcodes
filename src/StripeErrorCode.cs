@@ -1,11 +1,11 @@
-﻿using Intellenum;
+using Soenneker.Gen.EnumValues;
 
 namespace Soenneker.Stripe.Enums.ErrorCodes;
 
 /// <summary>
 /// A strongly-typed list of known Stripe error codes returned in API responses, used for handling and categorizing Stripe errors programmatically.
 /// </summary>
-[Intellenum<string>]
+[EnumValue<string>]
 public partial class StripeErrorCode
 {
     public static readonly StripeErrorCode AccountClosed = new("account_closed");
