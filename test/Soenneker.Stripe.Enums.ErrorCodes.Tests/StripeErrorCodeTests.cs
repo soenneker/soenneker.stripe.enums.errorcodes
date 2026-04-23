@@ -1,10 +1,9 @@
-﻿using Xunit;
 
 namespace Soenneker.Stripe.Enums.ErrorCodes.Tests;
 
 public sealed class StripeErrorCodeTests
 {
-    [Fact]
+    [Test]
     public void Default()
     {
 
