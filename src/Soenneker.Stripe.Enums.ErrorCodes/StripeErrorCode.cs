@@ -21,6 +21,10 @@ public partial class StripeErrorCode
     /// </summary>
     public static readonly StripeErrorCode AccountErrorCountryChangeRequiresAdditionalSteps = new("account_error_country_change_requires_additional_steps");
     /// <summary>
+    /// The account holder name verification failed.
+    /// </summary>
+    public static readonly StripeErrorCode AccountHolderNameVerificationFailed = new("account_holder_name_verification_failed");
+    /// <summary>
     /// The account information mismatch.
     /// </summary>
     public static readonly StripeErrorCode AccountInformationMismatch = new("account_information_mismatch");
@@ -48,6 +52,10 @@ public partial class StripeErrorCode
     /// The amount too small.
     /// </summary>
     public static readonly StripeErrorCode AmountTooSmall = new("amount_too_small");
+    /// <summary>
+    /// The anomalous money movement request.
+    /// </summary>
+    public static readonly StripeErrorCode AnomalousMoneyMovementRequest = new("anomalous_money_movement_request");
     /// <summary>
     /// The api key expired.
     /// </summary>
@@ -225,9 +233,17 @@ public partial class StripeErrorCode
     /// </summary>
     public static readonly StripeErrorCode ForwardingApiUpstreamConnectionTimeout = new("forwarding_api_upstream_connection_timeout");
     /// <summary>
+    /// The forwarding api upstream error.
+    /// </summary>
+    public static readonly StripeErrorCode ForwardingApiUpstreamError = new("forwarding_api_upstream_error");
+    /// <summary>
     /// The idempotency key in use.
     /// </summary>
     public static readonly StripeErrorCode IdempotencyKeyInUse = new("idempotency_key_in_use");
+    /// <summary>
+    /// The incomplete number.
+    /// </summary>
+    public static readonly StripeErrorCode IncompleteNumber = new("incomplete_number");
     /// <summary>
     /// The incorrect address.
     /// </summary>
@@ -476,6 +492,10 @@ public partial class StripeErrorCode
     /// The payment method microdeposit failed.
     /// </summary>
     public static readonly StripeErrorCode PaymentMethodMicrodepositFailed = new("payment_method_microdeposit_failed");
+    /// <summary>
+    /// The payment method microdeposit processing error.
+    /// </summary>
+    public static readonly StripeErrorCode PaymentMethodMicrodepositProcessingError = new("payment_method_microdeposit_processing_error");
 
     /// <summary>
     /// The payment method microdeposit verification amounts invalid.
@@ -565,6 +585,14 @@ public partial class StripeErrorCode
     /// The progressive onboarding limit exceeded.
     /// </summary>
     public static readonly StripeErrorCode ProgressiveOnboardingLimitExceeded = new("progressive_onboarding_limit_exceeded");
+    /// <summary>
+    /// The promotion code customer missing first time.
+    /// </summary>
+    public static readonly StripeErrorCode PromotionCodeCustomerMissingFirstTime = new("promotion_code_customer_missing_first_time");
+    /// <summary>
+    /// The promotion code customer not first time.
+    /// </summary>
+    public static readonly StripeErrorCode PromotionCodeCustomerNotFirstTime = new("promotion_code_customer_not_first_time");
     /// <summary>
     /// The rate limit.
     /// </summary>
